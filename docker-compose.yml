@@ -1,0 +1,11 @@
+version: "3"
+services:
+  db:
+    image: "postgres:11"
+    container_name: "npr_songs_postgres"
+    ports:
+      - "54320:5432"
+    volumes:
+      - npr_songs_dbdata:/var/lib/postgresql/data
+volumes:
+  npr_songs_dbdata:
